@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حساب مساحة التصاميم</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- رأس الموقع -->
+  <header>
+    <h1>حساب مساحة التصاميم</h1>
+    <p>ارفع التصميم واكتشف المساحة والوزن المطلوب</p>
+  </header>
+
+  <!-- المحتوى -->
+  <main>
+    <button class="btn" onclick="document.getElementById('uploadSection').scrollIntoView({behavior: 'smooth'})">
+      ابدأ الآن
+    </button>
+
+    <section id="uploadSection" class="card">
+      <h2>رفع التصميم</h2>
+      <input type="file" id="fileInput" accept=".jpg,.jpeg,.png">
+      <canvas id="canvas" style="display:none;"></canvas>
+      <img id="preview" src="" alt="">
+      <br>
+      <button class="btn" onclick="calculateArea()">احسب المساحة</button>
+      <div id="result"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
